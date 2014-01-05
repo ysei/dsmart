@@ -1,0 +1,23 @@
+<html>
+<title>リスト</title>
+<body>
+<% @tables.each do |table| %>
+<h3><%= table.getTableName() %></h3>
+<table>
+  <tr>
+    <th>サーバURL</th>
+    <th>キー範囲の開始</th>
+    <th>キー範囲の終了</th>
+  </tr>
+  <% table.getServers().each do |server| %>
+  <tr>
+    <td><%= server[:url] %></td>
+    <td><%= server[:st] %></td>
+    <td><%= server[:ed] %></td>
+  </tr>
+  <% end %>
+</table>
+<% end %>
+</body>
+</html>
+
