@@ -26,7 +26,11 @@ end
 # サーバ一覧(JSON)
 get '/list_json' do
   content_type :json
-  $tables.to_json
+  ret = []
+  $tables.each do |table|
+    ret << {:table => table.getTableName(), :servers => table.getServers() }
+  end
+  ret.to_json
 end
 
 
