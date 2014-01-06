@@ -17,11 +17,19 @@ get '/' do
   "TEST"
 end
 
-# サーバ追加
+# サーバ一覧
 get '/list' do
   @tables = $tables
   erb :list
 end
+
+# サーバ一覧(JSON)
+get '/list_json' do
+  content_type :json
+  $tables.to_json
+end
+
+
 
 # サーバ追加
 # table_name: テーブル名
