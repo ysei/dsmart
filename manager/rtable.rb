@@ -26,8 +26,8 @@ class RTable
     if @servers.size == 0 then
       # 最初のサーバ
       @servers << {:st => 0, :ed => 2**160-1, :url => url}
-      # 情報
-      puts ">> New Server #{url}"
+      # 初期化
+      # puts "New server"
     else
       # ２つ目以降のサーバ
       @servers.sort_by! {|data| data[:ed]-data[:st]}
@@ -40,9 +40,9 @@ class RTable
       # 追加されたサーバ
       @servers << {:st => mid+1, :ed => target[:ed], :url => url}
       # 移動の情報
-      puts ">> From #{target[:url]}"
-      puts ">> Range #{mid+1} - #{target[:ed]}"
-      puts ">> To #{url}"      
+      # puts ">> From #{target[:url]}"
+      # puts ">> Range #{mid+1} - #{target[:ed]}"
+      # puts ">> To #{url}"      
     end
   end
 end
