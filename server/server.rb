@@ -27,7 +27,7 @@ end
 # Request STATUS
 # STATUS
 def status_request(req)
-  return `uptime`
+  return $database.size.to_s
 end
 
 # Undefined Request
