@@ -21,14 +21,14 @@ table_nameにテーブル名を，urlにサーバ名を指定します．
 
 例えば，次のようにすると分散されたデータベースサーバを管理する様子が分かります．
 
-<http://localhost:9292/add_server?table_name=aaa&url=server1>
-<http://localhost:9292/add_server?table_name=aaa&url=server2>
-<http://localhost:9292/add_server?table_name=aaa&url=server3>
+1. <http://localhost:9292/add_server?table_name=aaa&url=server1>
+2. <http://localhost:9292/add_server?table_name=aaa&url=server2>
+3. <http://localhost:9292/add_server?table_name=aaa&url=server3>
 
 これで，テーブルaaaに対して，3つのサーバに分散させた状態になります．さらに，
 
-<http://localhost:9292/add_server?table_name=bbb&url=server1>
-<http://localhost:9292/add_server?table_name=bbb&url=server2>
+1. <http://localhost:9292/add_server?table_name=bbb&url=server1>
+2. <http://localhost:9292/add_server?table_name=bbb&url=server2>
 
 テーブルbbbに対して，2つのサーバに分散させた状態になります．これらの情報は，<http://localhost:9292/list> で確認できます．
 
